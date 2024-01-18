@@ -7,48 +7,58 @@ const renderProject = () => {
   db.collection('projects').doc(projectId).get().then(doc => {
     if (!doc.exists) {
       console.error('No such document!');
-      mainContainer.innerHTML = '<p>Project not found.</p>';
-      return;
+      return mainContainer.innerHTML = '<p>Project not found.</p>';
     }
 
-    let contentHTML = '';
     const mediaItems = doc.data().project;
-    let loadedItems = 0;
+    mainContainer.innerHTML = mediaItems.map((item, index) => 
+      item.startsWith('https://') ?
+      `<img class="project-image" alt="Image ${index + 1}" src="${item}">` :
+      `<div id="player-${index}" class="video-container"></div>`
+    ).join('');
 
     mediaItems.forEach((item, index) => {
-      if (item.startsWith('https://')) {
-        contentHTML += `<img class="project-image" alt="Image ${index + 1}" src="${item}">`;
-      } else {
-        contentHTML += `<div class="video-container">
-                          <iframe src="https://player.vimeo.com/video/${item}" frameborder="0" allow="picture-in-picture" allowfullscreen></iframe>
-                          <div class="video-overlay"></div>
-                        </div>`;
+      if (!item.startsWith('https://')) {
+        const shouldLoop = item.startsWith('loop-');
+        const videoId = shouldLoop ? item.replace('loop-', '') : item;
+
+        new Vimeo.Player(`player-${index}`, {
+          url: `https://vimeo.com/${videoId}`,
+          id: videoId,
+          controls: !shouldLoop,
+          autoplay: shouldLoop,
+          background: shouldLoop,
+          loop: shouldLoop,
+          muted: true,
+          byline: false,
+          title: false,
+          portrait: false
+        });
       }
     });
 
-    mainContainer.innerHTML = contentHTML;
-
-    const mediaElements = mainContainer.querySelectorAll('img, iframe');
-    mediaElements.forEach(media => {
-      media.onload = () => {
-        loadedItems++;
-        window.incrementLoadingProgress((loadedItems / mediaItems.length) * 100);
-
-        if (loadedItems === mediaItems.length) {
-          window.incrementLoadingProgress(100);
-        }
-      };
-
-      // For iframes, there is no 'load' event, so consider them loaded immediately
-      if (media.tagName.toLowerCase() === 'iframe') {
-        media.onload();
-      }
-    });
-
+    loadMediaElements(mainContainer, mediaItems.length);
   }).catch(error => {
     console.error('Error:', error);
     mainContainer.innerHTML = '<p>Error loading project.</p>';
     window.unlockScreen();
+  });
+};
+
+const loadMediaElements = (container, totalItems) => {
+  let loadedItems = 0;
+  container.querySelectorAll('img, iframe').forEach(media => {
+    media.onload = () => {
+      if (++loadedItems === totalItems) {
+        window.incrementLoadingProgress(100);
+      } else {
+        window.incrementLoadingProgress((loadedItems / totalItems) * 100);
+      }
+    };
+
+    if (media.tagName.toLowerCase() === 'iframe') {
+      media.onload();
+    }
   });
 };
 
