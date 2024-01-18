@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>(Jaden Kim)</title>
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="stylesheet" href="styles/typography.css">
+
+  <link rel="stylesheet" href="styles/components/nav.css">
+  <link rel="stylesheet" href="styles/components/footer.css">
+  <link rel="stylesheet" href="styles/components/loadingScreen.css">
+  
+  <link rel="stylesheet" href="styles/pages/index.css">
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="data/firebaseConfig.js"></script>
+</head>
+
+<body>
+  <div class="loading-screen">
+    <div id="arc-1"></div>
+    <div id="arc-2"></div>
+  </div>
+
+  <nav>
+    <a href="#"><p>(Jaden Kim)</p></a>
+    <button class="mobile-menu-button">(Menu)</button>
+    <div id="mobile-menu">
+      <button class="mobile-menu-button">(Menu)</button>
+      <div>
+        <a href="info.html"><h2>Info</h2></a>
+        <a href="projects.html"><h2>Projects</h2></a>
+        <a href="dump.html"><h2>Dump</h2></a>
+      </div>
+    </div>
+
+    <span id="desktop-menu">
+      <a href="info.html">(Info)</a>
+      <a href="projects.html">(Projects)</a>
+      <a href="dump.html">(Dump)</a>
+    </span>
+  </nav>
+
+  <main>
+    <section id="about-section">
+      <h1>
+        I’m Jaden. Designer, developer, dude with a $ and a dream. 
+        My dream is to have more than a $.
+        Please support my dream by <a id="about-hire-me-link" href="mailto:office@jadenk.im">(hiring me)</a>.
+        Or just <a id="about-venmo-me-link" href="https://venmo.com/jadenk">(Venmo me)</a>.
+        Or <a id="about-learn-more-link" href="info.html">(learn more)</a> about me first!
+      </h1>
+    </section>
+  
+    <section id="projects-section"><div class="projects-container"></div></section>
+
+    <section id="contact-section">
+    </section>
+  </main>
+
+  <footer>
+    <span>
+      <a href="#">(Scroll To Top)</a>
+    </span>
+
+    <div>
+      <a href="mailto:office@jadenk.im"><h2>Email</h2></a>
+      <a href="https://are.na/jaden"><h2>Are.na</h2></a>
+      <a href="https://github.com/jdnk"><h2>Github</h2></a>
+      <a href="https://behance.net/jadenkim"><h2>Behance</h2></a>
+      <a href="https://linkedin.com/in/jdnk"><h2>LinkedIn</h2></a>
+      <a href="https://venmo.com/jadenk"><h2>Venmo</h2></a>
+    </div>
+
+    <p><img src="assets/images/logos/logo-white.svg"> © 2024</p>
+  </footer>
+
+  <script src="scripts/load/load.js"></script>
+  <script src="scripts/load/getProjects.js"></script>
+
+  <script src="scripts/effects/mobileMenu.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => getProjects(6));
+  </script>
+</body>
+</html>
+
+</html>

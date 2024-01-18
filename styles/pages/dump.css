@@ -1,0 +1,33 @@
+main {
+    padding-top: calc(var(--spacing-lg) + var(--spacing-sm) + var(--fontsize-sm));
+    padding-left: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
+}
+
+#dump-container {
+    padding-bottom: var(--spacing-lg);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md) var(--spacing-sm);
+}
+
+#dump-container > img {
+    width: calc((100% - 2 * var(--spacing-sm)) / 3);
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+/* BREAKPOINTS */
+@media screen and (max-width: 1024px) {
+    #dump-container > img {
+        width: calc((100% - var(--spacing-sm)) / 2);
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #dump-container > img {
+        width: 100%;
+    }
+}
+  

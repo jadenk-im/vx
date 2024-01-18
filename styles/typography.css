@@ -1,0 +1,47 @@
+h1, h2, p, a, label, input, button {
+  font-family: sans-serif;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-size: var(--fontsize-lg);
+  line-height: var(--lineheight-lg);
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: var(--fontsize-lg);
+  line-height: var(--lineheight-lg);
+}
+
+p, a, label, input, button {
+  font-size: var(--fontsize-sm);
+  line-height: var(--lineheight-sm);
+  border: none;
+}
+
+a:hover, button:hover {
+  cursor: pointer;
+  position: relative;
+  color: var(--bg-color);
+}
+
+a:hover::after, button:hover::after {
+  content: '';
+  width: calc(100% + 2 * var(--spacing-md));
+  height: calc(100% + 2 * var(--spacing-md));
+  top: calc(-1 * var(--spacing-md));
+  left: calc(-1 * var(--spacing-md));
+  border-radius: var(--radius-sm);
+  position: absolute;
+  z-index: 99;
+  background-color: var(--highlight-color);
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+}

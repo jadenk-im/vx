@@ -1,0 +1,31 @@
+footer {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    padding: var(--spacing-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+footer > span {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+footer > div {
+    display: flex;
+    flex-direction: column;
+}
+
+footer > div > a {
+    position: relative;
+    width: fit-content;
+    align-items: center;
+}
+
+footer > p {
+    color: var(--highlight-color-2);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}

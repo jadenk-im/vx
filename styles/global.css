@@ -1,0 +1,71 @@
+:root {
+  --bg-color: white;
+  --text-color: blue;
+  --highlight-color: orangered;
+
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+
+  --radius-sm: 24px;
+
+  --fontsize-sm: 24px;
+  --fontsize-lg: 81px;
+
+  --lineheight-sm: 1.1;
+  --lineheight-lg: 0.85;
+
+  --transition: cubic-bezier(0.87, 0, 0.13, 1);
+  --transition-all: all 1000ms var(--transition);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*::selection {
+  color: var(--highlight-color);
+}
+
+html, body {
+  color: var(--text-color);
+  margin: 0;
+  background-color: var(--bg-color);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  overflow-x: clip;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+/* BREAKPOINTS */
+@media screen and (max-width: 768px) {
+  :root {
+    --fontsize-sm: 16px;
+    --fontsize-lg: 54px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  :root {
+    --fontsize-lg: 36px;
+  }
+}
