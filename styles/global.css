@@ -51,7 +51,8 @@ main {
 }
 
 .no-scroll {
-  overflow: hidden;
+  position: fixed;
+  overflow: clip;
   height: 100%;
   width: 100%;
 }
