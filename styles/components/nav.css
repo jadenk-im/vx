@@ -14,7 +14,7 @@ nav > span {
     gap: var(--spacing-sm);
 }
 
-.mobile-menu-button, #mobile-menu {
+.mobile-menu-button, .mobile-menu {
     display: none;
 
 }
@@ -24,7 +24,7 @@ nav > span {
     text-align: right;
 }
 
-#mobile-menu {
+.mobile-menu {
     position: fixed;
     top: 0;
     left: 0;
@@ -35,13 +35,13 @@ nav > span {
     z-index: 999999;
 }
 
-#mobile-menu .mobile-menu-button {
+.mobile-menu .mobile-menu-button {
     position: absolute;
     top: var(--spacing-sm);
     right: var(--spacing-sm);
 }
 
-#mobile-menu div {
+.mobile-menu div {
     position: absolute;
     bottom: var(--spacing-sm);
     left: var(--spacing-sm);
@@ -49,7 +49,7 @@ nav > span {
     flex-direction: column;
 }
 
-#mobile-menu div a {
+.mobile-menu div a {
     width: fit-content;
     align-items: center;
 }
@@ -61,7 +61,7 @@ nav > span {
         display: block;
     }
 
-    #desktop-menu {
+    .desktop-menu {
         display: none;
     }
   }

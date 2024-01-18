@@ -36,7 +36,7 @@
   <nav>
     <a href="index.html"><p>(Jaden Kim)</p></a>
     <button class="mobile-menu-button">(Menu)</button>
-    <div id="mobile-menu">
+    <div class="mobile-menu">
       <button class="mobile-menu-button">(Menu)</button>
       <div>
         <a href="info.html"><h2>Info</h2></a>
@@ -45,7 +45,7 @@
       </div>
     </div>
 
-    <span id="desktop-menu">
+    <span class="desktop-menu">
       <a href="info.html">(Info)</a>
       <a href="#">(Projects)</a>
       <a href="dump.html">(Dump)</a>
@@ -69,9 +69,12 @@
   <script src="scripts/load/getProjects.js"></script>
 
   <script src="scripts/effects/mobileMenu.js"></script>
+  <script src="scripts/effects/mobileHover.js"></script>
+
   <script>
     document.addEventListener('DOMContentLoaded', () => getProjects(0));
   </script>
+  
 </body>
 </html>
 

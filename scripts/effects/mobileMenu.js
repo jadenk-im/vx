@@ -1,26 +1,23 @@
 const mobileMenu = () => {
     const html = document.documentElement;
-    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenu = document.querySelector('.mobile-menu');
     const mobileMenuButton = document.querySelectorAll('.mobile-menu-button');
-    let scrollPosition = 0; // Variable to store the scroll position
+    let scrollPosition = 0;
 
     const toggleMobileMenu = () => {
         const isMenuVisible = mobileMenu.style.display === 'flex';
 
         if (isMenuVisible) {
-            // Menu is currently visible; about to hide it
-            html.style.removeProperty('position');
-            html.style.removeProperty('top');
-            window.scrollTo(0, scrollPosition); // Scroll to the original position
+            html.classList.remove('no-scroll');
+            setTimeout(() => {
+                window.scrollTo(0, scrollPosition);
+            }, 0);
         } else {
-            // Menu is currently hidden; about to show it
-            scrollPosition = window.pageYOffset; // Save the scroll position
-            html.style.position = 'fixed';
-            html.style.top = `-${scrollPosition}px`; // Offset the top to the negative scroll position
+            scrollPosition = window.pageYOffset;
+            html.classList.add('no-scroll');
         }
 
         mobileMenu.style.display = isMenuVisible ? 'none' : 'flex';
-        html.classList.toggle('no-scroll', !isMenuVisible);
     };
 
     mobileMenuButton.forEach(button => button.addEventListener('click', toggleMobileMenu));

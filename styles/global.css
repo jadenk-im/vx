@@ -36,7 +36,6 @@ html, body {
   background-position: center;
   background-size: cover;
   overflow-x: clip;
-  scroll-behavior: smooth;
   height: 100%;
 }
 
