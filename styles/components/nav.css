@@ -6,6 +6,7 @@ nav {
     z-index: 9999;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     padding: var(--spacing-sm);
 } 
 
@@ -52,6 +53,11 @@ nav > span {
 .mobile-menu div a {
     width: fit-content;
     align-items: center;
+}
+
+.nav-controller {
+    display: flex;
+    flex-direction: column;
 }
 
 /* BREAKPOINTS */

@@ -1,3 +1,21 @@
+.description-container {
+  padding-top: calc(var(--spacing-lg) + var(--spacing-sm) * 5);
+  padding-left: var(--spacing-sm);
+  padding-right: var(--spacing-sm);
+  padding-bottom: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 75%;
+}
+
+.project-description {
+  width: calc(75vw - var(--spacing-sm) * 2);
+  font-size: var(--fontsize-xs);
+}
+
 .project-container {
   display: flex;
   flex-direction: column;
@@ -40,4 +58,13 @@
 
 .vp-outro-wrapper.in {
   display: none !important;
+}
+
+
+/* BREAKPOINTS */
+@media screen and (max-width: 1024px) {
+  .project-description {
+    width: 100%;
+    text-align: justify;
+  }
 }

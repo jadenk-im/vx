@@ -1,8 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script>
+  $(() => {
+    var xhr = $.get("https://api.giphy.com/v1/gifs/random?api_key=FJn3QHF7XUelXyIxPaPzVAoMlBVpYy4p");
+    xhr.done((data) => {
+      var imageUrl = data.data.images.original.url;
+      $('html').css('background-image', 'url(' + imageUrl + ')');
+    }).fail(function(error) {
+      console.log("Error:", error);
+    });
+  });
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FFFFFF">
 
   <title>(Jaden Kim)</title>
 
@@ -22,12 +36,33 @@
 
 <body>
   <nav>
-    <a href="index.html"><p>(Jaden Kim)</p></a>
-    <a href="javascript:void(0);" onclick="window.history.back();">(Back)</a>
+    <div class="nav-controller">
+      <a href="index.html">Jaden Kim</a>
+      <a href="javascript:void(0);" onclick="window.history.back();">Back</a>
+    </div>
+
+    <button class="mobile-menu-button">Menu</button>
+    <div class="mobile-menu">
+      <button class="mobile-menu-button">Menu</button>
+      <div>
+        <a href="work.html"><h2>Work</h2></a>
+        <a href="mantras.html"><h2>Mantras</h2></a>
+        <a href="contact.html"><h2>Contact</h2></a>
+      </div>
+    </div>
+
+    <span class="desktop-menu">
+      <a href="work.html">Work</a>
+      <a href="mantras.html">Mantras</a>
+      <a href="contact.html">Contact</a>
+    </span>
   </nav>
 
   <main>
-    <h1>(404)</h1>
-    <p>This is not an area code.</p>
+    <h1>HERE'S A GIF (404)</h1>
   </main>
+
+  <footer>
+    <p><img src="assets/images/logos/logo.svg"> © 2024</p>
+  </footer>
 </body>

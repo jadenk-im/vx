@@ -1,63 +1,44 @@
+html, body, main {
+    background-color: transparent;
+}
+
 main {
     padding-top: calc(var(--spacing-lg) + var(--spacing-sm) + var(--fontsize-sm));
     padding-left: var(--spacing-sm);
     padding-right: var(--spacing-sm);
+    padding-bottom: var(--spacing-lg);
 }
 
-#about-section {
-    margin-bottom: var(--spacing-lg);
-}
-
-#about-section h1 > a {
-    font-size: var(--fontsize-lg);
-    line-height: var(--lineheight-lg);
-    white-space: nowrap;
-}
-
-#projects-section {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
-}
-
-.projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-md) var(--spacing-sm);
-}
-
-#projects-section > a {
-    position: relative;
-    width: fit-content;
-    align-items: center;
-}
-
-.project-thumbnail {
-    width: calc((100% - 2 * var(--spacing-sm)) / 3);
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
-}
-
-.project-thumbnail-image {
+.background-container {
+    position: fixed; /* Fixed position to ensure it covers the whole screen at all times */
+    top: 0;
+    left: 0;
     width: 100%;
-    aspect-ratio: 16/9;
-    background-color: var(--text-color);
-    background-position: center;
-    background-size: cover;
+    height: 100%;
+    z-index: -1; /* Send it to the back */
+    object-fit: cover; /* Ensure content covers the area */
+    overflow: hidden; /* Prevent any overflow from this container */
 }
 
-/* BREAKPOINTS */
-@media screen and (max-width: 1024px) {
-    .project-thumbnail {
-        width: calc((100% - var(--spacing-sm)) / 2);
-    }
+.background-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    border: 0;
+    object-fit: cover; /* This may not apply directly to iframe but helps with other elements */
+}  
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
 }
 
-@media screen and (max-width: 640px) {
-    .project-thumbnail {
-        width: 100%;
-    }
+.vp-outro-wrapper.in {
+    display: none !important;
 }
-  

@@ -5,6 +5,15 @@ html, body, main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: var(--spacing-md);
     padding: var(--spacing-sm);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-color: transparent;
+}
+
+footer {
+    width: 100%;
+    text-align: left;
 }

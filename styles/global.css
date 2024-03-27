@@ -1,18 +1,19 @@
 :root {
-  --bg-color: white;
-  --text-color: blue;
-  --highlight-color: orangered;
+  --bg-color: #FFFFFF;
+  --text-color: #666666;
+  --highlight-color: #e6e6e6;
 
   --spacing-sm: 8px;
-  --spacing-md: 16px;
-  --spacing-lg: 24px;
+  --spacing-md: 48px;
+  --spacing-lg: 96px;
 
   --radius-sm: 24px;
 
+  --fontsize-xs: 16px;
   --fontsize-sm: 24px;
-  --fontsize-lg: 81px;
+  --fontsize-lg: 54px;
 
-  --lineheight-sm: 1.1;
+  --lineheight-sm: 0.85;
   --lineheight-lg: 0.85;
 
   --transition: cubic-bezier(0.87, 0, 0.13, 1);
@@ -24,7 +25,7 @@
 }
 
 *::selection {
-  color: var(--highlight-color);
+  background-color: var(--highlight-color);
 }
 
 html, body {
@@ -60,12 +61,15 @@ main {
 @media screen and (max-width: 768px) {
   :root {
     --fontsize-sm: 16px;
-    --fontsize-lg: 54px;
+    --fontsize-lg: 36px;
+    
+    --spacing-md: 24px;
+    --spacing-lg: 48px;
   }
 }
 
 @media screen and (max-width: 480px) {
   :root {
-    --fontsize-lg: 36px;
+    --fontsize-lg: 24px;
   }
 }

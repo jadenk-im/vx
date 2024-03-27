@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FFFFFF">
 
   <title>(Jaden Kim)</title>
 
@@ -20,7 +21,7 @@
   <link rel="stylesheet" href="styles/components/footer.css">
   <link rel="stylesheet" href="styles/components/loadingScreen.css">
   
-  <link rel="stylesheet" href="styles/pages/projects.css">
+  <link rel="stylesheet" href="styles/pages/work.css">
 
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
@@ -34,35 +35,37 @@
   </div>
 
   <nav>
-    <a href="index.html"><p>(Jaden Kim)</p></a>
-    <button class="mobile-menu-button">(Menu)</button>
+    <div class="nav-controller">
+        <a href="index.html">Jaden Kim</a>
+        <a href="javascript:void(0);" onclick="window.history.back();">Back</a>
+    </div>
+
+    <button class="mobile-menu-button">Menu</button>
     <div class="mobile-menu">
-      <button class="mobile-menu-button">(Menu)</button>
+      <button class="mobile-menu-button">Menu</button>
       <div>
-        <a href="info.html"><h2>Info</h2></a>
-        <a href="#"><h2>Projects</h2></a>
-        <a href="dump.html"><h2>Dump</h2></a>
+        <a href="#"><h2>Work</h2></a>
+        <a href="mantras.html"><h2>Mantras</h2></a>
+        <a href="contact.html"><h2>Contact</h2></a>
       </div>
     </div>
 
     <span class="desktop-menu">
-      <a href="info.html">(Info)</a>
-      <a href="#">(Projects)</a>
-      <a href="dump.html">(Dump)</a>
+      <a href="#">Work</a>
+      <a href="mantras.html">Mantras</a>
+      <a href="contact.html">Contact</a>
     </span>
   </nav>
 
   <main>
-    <section id="projects-section"><div class="projects-container"></div></section>
+    <section id="projects-section">
+      <div class="projects-container">
+      </div>
+    </section>
   </main>
 
   <footer>
-    <span>
-      <a href="javascript:void(0);" onclick="window.history.back();">(Back)</a>
-      <a href="#">(Scroll To Top)</a>
-    </span>
-
-    <p><img src="assets/images/logos/logo-white.svg"> © 2024</p>
+    <p><img src="assets/images/logos/logo.svg"> © 2024</p>
   </footer>
 
   <script src="scripts/load/load.js"></script>

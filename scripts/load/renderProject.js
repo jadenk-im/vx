@@ -1,5 +1,6 @@
 const renderProject = () => {
   const mainContainer = document.querySelector('.project-container');
+  const descContainer = document.querySelector('.description-container');
   window.lockScreen();
 
   const projectId = new URLSearchParams(window.location.search).get('id');
@@ -10,7 +11,20 @@ const renderProject = () => {
       return mainContainer.innerHTML = '<p>Project not found.</p>';
     }
 
+    const { thumbnail, title, type, date, description, hex } = doc.data();
     const mediaItems = doc.data().project;
+    descContainer.innerHTML = `
+      <div class="project-title">
+        <h1>${title}</h1>
+        <h1>${type}</h1>
+        <h1>${date}</h1>
+      </div>
+      <p class="project-description">${description}</p>
+    `;
+
+    descContainer.style.backgroundColor = `#${hex}`;
+    descContainer.style.backgroundImage = `url(${thumbnail})`;
+
     mainContainer.innerHTML = mediaItems.map((item, index) => 
       item.startsWith('https://') ?
       `<img class="project-image" alt="Image ${index + 1}" src="${item}">` :
@@ -41,7 +55,6 @@ const renderProject = () => {
   }).catch(error => {
     console.error('Error:', error);
     mainContainer.innerHTML = '<p>Error loading project.</p>';
-    window.unlockScreen();
   });
 };
 
