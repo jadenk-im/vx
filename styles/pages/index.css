@@ -1,44 +1,85 @@
-html, body, main {
-    background-color: transparent;
-}
-
 main {
-    padding-top: calc(var(--spacing-lg) + var(--spacing-sm) + var(--fontsize-sm));
     padding-left: var(--spacing-sm);
     padding-right: var(--spacing-sm);
     padding-bottom: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    align-items: flex-start;
 }
 
-.background-container {
-    position: fixed; /* Fixed position to ensure it covers the whole screen at all times */
-    top: 0;
-    left: 0;
+main > div {
+    display: flex;
     width: 100%;
-    height: 100%;
-    z-index: -1; /* Send it to the back */
-    object-fit: cover; /* Ensure content covers the area */
-    overflow: hidden; /* Prevent any overflow from this container */
 }
 
-.background-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    border: 0;
-    object-fit: cover; /* This may not apply directly to iframe but helps with other elements */
-}  
-
-.video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
+#project-header, #category-header {
+    flex: 2;
 }
 
-.vp-outro-wrapper.in {
-    display: none !important;
+#year-header { 
+    flex: 1;
 }
+
+#image-header {
+    flex: 7;
+    left: 4px;
+}
+
+main > a > div {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.project-title {
+    flex: 5;
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.project-title > p {
+    flex: 2;
+    max-height: fit-content;
+}
+
+.project-title > p:last-child {
+    flex: 1;
+    max-height: fit-content;
+}
+
+.project-cover {
+    flex: 7;
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.project-cover > img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+/* BREAKPOINTS */
+
+    @media screen and (max-width: 1280px) {
+        main > div {
+            display: none;
+        }
+        .project-title {
+            flex-direction: column;
+            gap: 0;
+            flex: 3;
+        }
+
+        .project-cover {
+            flex: 9;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        main > a > div {
+            flex-direction: column-reverse;
+            gap: var(--spacing-sm);
+        }
+    }

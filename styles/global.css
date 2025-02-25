@@ -1,23 +1,23 @@
 :root {
-  --bg-color: #FFFFFF;
-  --text-color: #666666;
-  --highlight-color: #e6e6e6;
+  --bg-color: white;
+  --text-color: hsl(0,0%, 10%);
+  --highlight-color: hsl(0,0%,60%);
 
   --spacing-sm: 8px;
   --spacing-md: 48px;
   --spacing-lg: 96px;
 
-  --radius-sm: 24px;
+  --fontsize-sm: 10px;
+  --fontsize-md: 15px;
+  --fontsize-lg: 51px;
 
-  --fontsize-xs: 16px;
-  --fontsize-sm: 24px;
-  --fontsize-lg: 54px;
-
-  --lineheight-sm: 0.85;
-  --lineheight-lg: 0.85;
+  --lineheight-sm: 1.3;
+  --lineheight-md: 1.1;
+  --lineheight-lg: 0.9;
 
   --transition: cubic-bezier(0.87, 0, 0.13, 1);
-  --transition-all: all 1000ms var(--transition);
+  --transition-all: all 500ms ease-in-out;
+  --transition-opacity: opacity 250ms var(--transition);
 }
 
 * {
@@ -25,6 +25,7 @@
 }
 
 *::selection {
+  color: var(--bg-color);
   background-color: var(--highlight-color);
 }
 
@@ -37,7 +38,6 @@ html, body {
   background-position: center;
   background-size: cover;
   overflow-x: clip;
-  height: 100%;
 }
 
 body {
@@ -50,26 +50,15 @@ main {
   flex-grow: 1;
 }
 
-.no-scroll {
-  position: fixed;
-  overflow: clip;
-  height: 100%;
-  width: 100%;
-}
-
 /* BREAKPOINTS */
 @media screen and (max-width: 768px) {
   :root {
-    --fontsize-sm: 16px;
-    --fontsize-lg: 36px;
-    
-    --spacing-md: 24px;
+    --fontsize-lg: 34px;
     --spacing-lg: 48px;
+    --spacing-md: 24px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  :root {
-    --fontsize-lg: 24px;
-  }
+
 }

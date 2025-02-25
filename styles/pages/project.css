@@ -1,70 +1,85 @@
-.description-container {
-  padding-top: calc(var(--spacing-lg) + var(--spacing-sm) * 5);
-  padding-left: var(--spacing-sm);
-  padding-right: var(--spacing-sm);
-  padding-bottom: var(--spacing-lg);
+body {
+    padding-top: var(--spacing-sm);
+    padding-left: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
+    padding-bottom: var(--spacing-lg);
+}
+
+.left-column {
+    position: fixed;
+    width: calc(33% - (var(--spacing-sm) + var(--spacing-md)));
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+#nav-logo {
+  max-height: fit-content;
+}
+
+.project-title {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto 75%;
+  gap: calc(var(--spacing-sm)*2);
 }
 
-.project-description {
-  width: calc(75vw - var(--spacing-sm) * 2);
-  font-size: var(--fontsize-xs);
+.project-title > h4 {
+  padding-top: calc(var(--spacing-md) - var(--spacing-sm));
 }
 
-.project-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0;
+.right-column {
+    padding-left: calc(33% + var(--spacing-sm));
+    padding-top: calc(var(--spacing-sm) + var(--spacing-lg));
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    width: 100%;
 }
 
-.project-image {
-  background-color: var(--highlight-color-1);
+.right-column > img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.full-image {
+    height: 100%;
+    aspect-ratio: auto !important;
+}
+
+iframe {
   width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.video-container {
-  background-color: var(--highlight-color-1);
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  padding-top: 56.25%; /* For a 16:9 aspect ratio. It's calculated by 9 / 16 * 100% */
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  aspect-ratio: 16 / 9;
   border: none;
-}
-
-.video-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-}
-
-.vp-outro-wrapper.in {
-  display: none !important;
 }
 
 
 /* BREAKPOINTS */
-@media screen and (max-width: 1024px) {
-  .project-description {
+
+@media screen and (max-width: 1280px) {
+
+}
+
+@media screen and (max-width: 768px) {
+  .left-column {
+    position: relative;
+    width: 100%
+  }
+
+  .project-title {
+    width: 67%;
+  }
+
+  .right-column {
     width: 100%;
-    text-align: justify;
+    padding-left: 0;
+    padding-top: var(--spacing-md);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .project-title {
+    width: 100%;
   }
 }

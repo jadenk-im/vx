@@ -1,8 +1,17 @@
 @font-face {
-    font-family: 'Neue Haas';
-    src: url('../assets/fonts/NeueHaasDisplayBold.woff') format('woff'),
-    url('../assets/fonts/NeueHaasDisplayBold.woff2') format('woff2');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-  }
+  font-family: 'NeueHaas';
+  src: url('../assets/fonts/NH-Med.woff') format('woff'),
+  url('../assets/fonts/NH-Med.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NeueHaasDisplay';
+  src: url('../assets/fonts/NHD-Black.woff') format('woff'),
+  url('../assets/fonts/NHD-Black.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

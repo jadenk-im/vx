@@ -1,32 +1,59 @@
-h1, h2, p, a, label, input, button {
-  font-family: 'Neue Haas', 'Helvetica', sans-serif;
-  font-weight: 600;
+h1, h2, h4, p, a, label, input, button {
+  font-family: 'NeueHaas', 'Helvetica', sans-serif;
+  font-weight: 500;
   margin: 0;
   padding: 0;
   position: relative;
   text-decoration: none;
+  border: none;
   color: inherit;
-  text-transform: uppercase;
+  hyphens: auto;
+  text-align: justify;
 }
 
 h1 {
+  font-family: 'NeueHaasDisplay';
   font-size: var(--fontsize-lg);
   line-height: var(--lineheight-lg);
 }
 
 h2 {
-  font-size: var(--fontsize-lg);
-  line-height: var(--lineheight-lg);
+  font-size: var(--fontsize-md);
+  line-height: var(--lineheight-md);
+  text-transform: uppercase;
 }
 
 p, a, label, input, button {
-  font-size: var(--fontsize-sm);
-  line-height: var(--lineheight-sm);
-  border: none;
+  font-size: var(--fontsize-md);
+  line-height: var(--lineheight-md);
 }
 
-a:hover, button:hover {
+h4 {
+  font-size: var(--fontsize-sm);
+  line-height: var(--lineheight-sm);
+  color: var(--highlight-color);
+}
+
+a {
+  cursor: default;
+}
+
+a > h1, a > p, a > div {
+  cursor: pointer;
+  max-width: fit-content;
+}
+
+a > h1:hover, a > p:hover, a > div:hover, a > img:hover, .project-hover:hover {
   cursor: pointer;
   position: relative;
   color: var(--highlight-color);
+}
+
+/* BREAKPOINTS */
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 480px) {
+
 }
