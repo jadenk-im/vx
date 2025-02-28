@@ -18,6 +18,7 @@
 
   <link rel="stylesheet" href="styles/components/nav.css">
   <link rel="stylesheet" href="styles/components/lightbox.css">
+  <link rel="stylesheet" href="styles/components/carousel.css">
   <link rel="stylesheet" href="styles/pages/project.css">
 </head>
 
@@ -43,39 +44,53 @@
 
     <div class="right-column">
       <img class="clickable-image" src="./assets/images/peppermania-2024/pm-1c.jpg" alt="Peppermania 2024, Image 1">
-      <img class="clickable-image" src="./assets/images/peppermania-2024/pm-2.jpg" alt="Peppermania 2024, Image 2">
+      <img class="clickable-image" src="./assets/images/peppermania-2024/pm-2.gif" alt="Peppermania 2024, Image 2">
       <img class="clickable-image" src="./assets/images/peppermania-2024/pm-3.jpg" alt="Peppermania 2024, Image 3">
-      <img class="clickable-image" src="./assets/images/peppermania-2024/pm-4a.jpg" alt="Peppermania 2024, Image 4">
-      <img class="clickable-image" src="./assets/images/peppermania-2024/pm-4b.jpg" alt="Peppermania 2024, Image 5">
-      <img class="clickable-image" src="./assets/images/peppermania-2024/pm-4c.jpg" alt="Peppermania 2024, Image 6">
-      <img class="clickable-image" src="./assets/images/peppermania-2024/pm-4d.jpg" alt="Peppermania 2024, Image 7">
-      <img class="clickable-image" src="./assets/images/peppermania-2024/pm-4e.jpg" alt="Peppermania 2024, Image 8">
-      <img class="clickable-image" src="./assets/images/peppermania-2024/pm-4f.jpg" alt="Peppermania 2024, Image 9">
+      <img class="clickable-image" src="./assets/images/peppermania-2024/pm-4a.gif" alt="Peppermania 2024, Image 4">
+
+      <div class="carousel">
+        <button class="carousel-btn prev" onclick="prevSlide()">&#10094;</button>
+        <div class="carousel-images">
+          <img class="clickable-image" src="./assets/images/peppermania-2024/pm-4c.jpg" alt="Peppermania 2024, Image 4">
+          <img class="clickable-image" src="./assets/images/peppermania-2024/pm-4d.jpg" alt="Peppermania 2024, Image 7">
+          <img class="clickable-image" src="./assets/images/peppermania-2024/pm-4e.jpg" alt="Peppermania 2024, Image 8">
+          <img class="clickable-image" src="./assets/images/peppermania-2024/pm-4f.jpg" alt="Peppermania 2024, Image 9">
+        </div>
+        <button class="carousel-btn next" onclick="nextSlide()">&#10095;</button>
+      </div>
+
       <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5a.gif" alt="Peppermania 2024, Image 10">
-      <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5b.jpg" alt="Peppermania 2024, Image 11">
-      <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5c.jpg" alt="Peppermania 2024, Image 12">
-      <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5d.jpg" alt="Peppermania 2024, Image 13">
-      <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5e.jpg" alt="Peppermania 2024, Image 14">
-      <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5f.jpg" alt="Peppermania 2024, Image 15">
-      <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5g.jpg" alt="Peppermania 2024, Image 16">
-      <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5h.jpg" alt="Peppermania 2024, Image 17">
-      <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5i.jpg" alt="Peppermania 2024, Image 18">
-      <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5j.jpg" alt="Peppermania 2024, Image 19">
-      <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5k.jpg" alt="Peppermania 2024, Image 20">
-      <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5l.jpg" alt="Peppermania 2024, Image 21">
-      <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5m.jpg" alt="Peppermania 2024, Image 22">
-      <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5n.jpg" alt="Peppermania 2024, Image 23">
-      <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5o.jpg" alt="Peppermania 2024, Image 24">
-      <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5p.jpg" alt="Peppermania 2024, Image 25">
+
+      <div class="carousel">
+        <button class="carousel-btn prev" onclick="prevSlide()">&#10094;</button>
+        <div class="carousel-images">
+          <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5b.jpg" alt="Peppermania 2024, Image 11">
+          <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5c.jpg" alt="Peppermania 2024, Image 12">
+          <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5d.jpg" alt="Peppermania 2024, Image 13">
+          <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5e.jpg" alt="Peppermania 2024, Image 14">
+          <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5f.jpg" alt="Peppermania 2024, Image 15">
+          <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5g.jpg" alt="Peppermania 2024, Image 16">
+          <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5h.jpg" alt="Peppermania 2024, Image 17">
+          <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5i.jpg" alt="Peppermania 2024, Image 18">
+          <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5j.jpg" alt="Peppermania 2024, Image 19">
+          <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5k.jpg" alt="Peppermania 2024, Image 20">
+          <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5l.jpg" alt="Peppermania 2024, Image 21">
+          <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5m.jpg" alt="Peppermania 2024, Image 22">
+          <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5n.jpg" alt="Peppermania 2024, Image 23">
+          <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5o.jpg" alt="Peppermania 2024, Image 24">
+          <img class="clickable-image" src="./assets/images/peppermania-2024/pm-5p.jpg" alt="Peppermania 2024, Image 25">
+        </div>
+        <button class="carousel-btn next" onclick="nextSlide()">&#10095;</button>
+      </div>
+
       <img class="clickable-image" src="./assets/images/peppermania-2024/pm-6a.jpg" alt="Peppermania 2024, Image 26">
       <img class="clickable-image" src="./assets/images/peppermania-2024/pm-6b.jpg" alt="Peppermania 2024, Image 27">
       <img class="clickable-image" src="./assets/images/peppermania-2024/pm-6c.jpg" alt="Peppermania 2024, Image 28">
-      <img class="clickable-image" src="./assets/images/peppermania-2024/pm-6d.jpg" alt="Peppermania 2024, Image 29">
-      <img class="clickable-image" src="./assets/images/peppermania-2024/pm-6e.jpg" alt="Peppermania 2024, Image 30">
       <img class="clickable-image" src="./assets/images/peppermania-2024/pm-6f.jpg" alt="Peppermania 2024, Image 31">
       <img class="clickable-image" src="./assets/images/peppermania-2024/pm-6g.jpg" alt="Peppermania 2024, Image 32">
     </div>
 
     <script src="scripts/lightbox.js"></script>
+    <script src="scripts/carousel.js"></script>
 </body>
 </html>

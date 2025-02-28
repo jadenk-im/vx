@@ -6,6 +6,7 @@
   --spacing-sm: 8px;
   --spacing-md: 48px;
   --spacing-lg: 96px;
+  --spacing-button: 24px;
 
   --fontsize-sm: 10px;
   --fontsize-md: 15px;
@@ -16,8 +17,9 @@
   --lineheight-lg: 0.9;
 
   --transition: cubic-bezier(0.87, 0, 0.13, 1);
-  --transition-all: all 500ms ease-in-out;
+  --transition-all: all 250ms var(--transition);
   --transition-opacity: opacity 250ms var(--transition);
+  --transition-transform: transform 250ms var(--transition);
 }
 
 * {

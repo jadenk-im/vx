@@ -18,6 +18,7 @@
 
   <link rel="stylesheet" href="styles/components/nav.css">
   <link rel="stylesheet" href="styles/components/lightbox.css">
+  <link rel="stylesheet" href="styles/components/carousel.css">
   <link rel="stylesheet" href="styles/pages/project.css">
 </head>
 
@@ -41,15 +42,30 @@
     </div>
 
     <div class="right-column">
-      <img class="clickable-image" src="./assets/images/home-is-a-bonfire/home-1.jpg" alt="Home is a Bonfire, Image 1">
-      <img class="clickable-image" src="./assets/images/home-is-a-bonfire/home-5.jpg" alt="Home is a Bonfire, Image 2">
-      <img class="clickable-image" src="./assets/images/home-is-a-bonfire/home-2.jpg" alt="Home is a Bonfire, Image 3">
-      <img class="clickable-image" src="./assets/images/home-is-a-bonfire/home-6.jpg" alt="Home is a Bonfire, Image 4">
-      <img class="clickable-image" src="./assets/images/home-is-a-bonfire/home-3.jpg" alt="Home is a Bonfire, Image 5">
-      <img class="clickable-image" src="./assets/images/home-is-a-bonfire/home-7.jpg" alt="Home is a Bonfire, Image 6">
+      <div class="carousel">
+        <button class="carousel-btn prev" onclick="prevSlide()">&#10094;</button>
+        <div class="carousel-images">
+          <img class="clickable-image" src="./assets/images/home-is-a-bonfire/home-1.jpg" alt="Home is a Bonfire, Image 1">
+          <img class="clickable-image" src="./assets/images/home-is-a-bonfire/home-2.jpg" alt="Home is a Bonfire, Image 2">
+          <img class="clickable-image" src="./assets/images/home-is-a-bonfire/home-3.jpg" alt="Home is a Bonfire, Image 3">
+        </div>
+        <button class="carousel-btn next" onclick="nextSlide()">&#10095;</button>
+      </div>
+
+      <div class="carousel">
+        <button class="carousel-btn prev" onclick="prevSlide()">&#10094;</button>
+        <div class="carousel-images">
+          <img class="clickable-image" src="./assets/images/home-is-a-bonfire/home-5.jpg" alt="Home is a Bonfire, Image 5">
+          <img class="clickable-image" src="./assets/images/home-is-a-bonfire/home-6.jpg" alt="Home is a Bonfire, Image 6">
+          <img class="clickable-image" src="./assets/images/home-is-a-bonfire/home-7.jpg" alt="Home is a Bonfire, Image 7">
+        </div>
+        <button class="carousel-btn next" onclick="nextSlide()">&#10095;</button>
+      </div>
+
       <img class="clickable-image full-image" src="./assets/images/home-is-a-bonfire/home-4.jpg" alt="Home is a Bonfire, Image 7">
     </div>
 
     <script src="scripts/lightbox.js"></script>
+    <script src="scripts/carousel.js"></script>
 </body>
 </html>
