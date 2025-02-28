@@ -37,3 +37,56 @@
     display: block;
     position: relative;
 }
+
+.lightbox-btn {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--bg-color);
+    border: none;
+    cursor: pointer;
+    padding: var(--spacing-sm);
+    font-size: var(--fontsize-sm);
+    z-index: 10;
+    transition: var(--transition-all);
+    width: var(--spacing-button);
+    height: var(--spacing-button);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.prev-lightbox {
+    left: var(--spacing-sm);
+}
+
+.next-lightbox {
+    right: var(--spacing-sm);
+}
+
+/* BREAKPOINTS */
+
+@media screen and (max-width: 1280px) {
+
+}
+
+@media screen and (max-width: 768px) {
+    .prev-lightbox {
+        left: calc(var(--spacing-md) + var(--spacing-sm));
+    }
+    
+    .next-lightbox {
+        right: calc(var(--spacing-md) + var(--spacing-sm));
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+}
