@@ -5,7 +5,7 @@ main {
     height: 100dvh;
     overflow-x: scroll;
     overflow-y: hidden;
-    scroll-padding-left: var(--spacing-sm);
+    scroll-padding: var(--spacing-sm);
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
 }
@@ -57,21 +57,13 @@ main > a:nth-child(odd) {
         flex-direction: column;
         overflow: auto;
         gap: var(--spacing-md);
-        height: auto;
         padding-bottom: var(--spacing-lg);
+        scroll-snap-type: y mandatory;
     }
 
     main > a {
-        width: calc(100% - var(--spacing-md)) !important;
-        height: auto;
+        width: 100% !important;
         flex: 0 0 auto;
-    }
-
-    main > a:nth-child(even) {
-        align-self: flex-end;
-    }
-
-    main > a:nth-child(odd) {
-        align-self: flex-start;
+        scroll-snap-align: start;
     }
 }

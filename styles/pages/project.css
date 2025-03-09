@@ -15,7 +15,7 @@ body {
 .left-column {
     position: fixed;
     height: calc(100% - (2 * var(--spacing-sm)));
-    width: calc(33% - (var(--spacing-sm) + var(--spacing-md)));
+    width: calc(25% - (var(--spacing-sm) + var(--spacing-md)));
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -28,7 +28,7 @@ body {
 .project-title {
   display: flex;
   flex-direction: column;
-  gap: calc(var(--spacing-sm)*2);
+  gap: var(--spacing-sm);
 }
 
 .project-title > div {
@@ -42,11 +42,11 @@ body {
 }
 
 .project-title > h4 {
-  padding-top: calc(var(--spacing-md) - var(--spacing-sm));
+  padding-top: var(--spacing-md);
 }
 
 .right-column {
-    padding-left: calc(33% + var(--spacing-sm));
+    padding-left: calc(25% + var(--spacing-sm));
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
@@ -76,7 +76,13 @@ iframe {
 /* BREAKPOINTS */
 
 @media screen and (max-width: 1280px) {
+  .left-column {
+    width: calc(33% - (var(--spacing-sm) + var(--spacing-md)));
+  }
 
+  .right-column {
+    padding-left: calc(33% + var(--spacing-sm));
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -102,6 +108,10 @@ iframe {
 
   .left-column > a {
     display: none;
+  }
+
+  .project-title > h4 {
+    padding-top: calc(var(--spacing-sm)/2);
   }
 }
 

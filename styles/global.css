@@ -3,9 +3,9 @@
   --text-color: hsl(0,0%, 10%);
   --highlight-color: hsl(0,0%,60%);
 
-  --spacing-sm: 8px;
-  --spacing-md: 48px;
-  --spacing-lg: 96px;
+  --spacing-sm: 12px;
+  --spacing-md: 24px;
+  --spacing-lg: 48px;
   --spacing-button: 24px;
 
   --fontsize-sm: 9px;
