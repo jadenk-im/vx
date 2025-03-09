@@ -1,73 +1,43 @@
 nav {
-    width: 100%;
-    padding-top: var(--spacing-sm);
-    padding-left: var(--spacing-sm);
-    padding-right: var(--spacing-sm);
-    padding-bottom: var(--spacing-lg);
-    display: flex;
-    gap: var(--spacing-sm);
+    bottom: 0;
+    padding: var(--spacing-sm);
     align-items: flex-start;
-}
-
-#nav-logo {
-    flex: 2;
-}
-
-#nav-bio {
-    flex: 2;
-}
-
-#nav-spacer {
-    flex: 2;
-}
-
-#nav-contact {
+    position: fixed;
+    z-index: 9999;
     display: flex;
-    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+nav > p {
     flex: 2;
 }
 
-#nav-links {
-    display: flex;
-    flex-direction: column;
-    flex: 4;
+nav > span {
+    position: relative;
+    top: -2px;
+    flex: 5;
 }
 
 /* BREAKPOINTS */
 
     @media screen and (max-width: 1280px) {
-
-        #nav-spacer {
-            display: none;
-        }
-
-        #nav-contact {
-            flex: 4;
-        }
-        
-        #nav-links {
-            flex: 6;
-        }
-
-        #nav-bio {
-            display: none;
+        nav {
+            gap: var(--spacing-md);
         }
     }
 
     @media screen and (max-width: 768px) {
         nav {
+            position: static;
             flex-direction: column;
-            max-height: fit-content;
-            gap: var(--spacing-md);
-        }
-
-        #nav-bio {
+            gap: var(--spacing-sm);
             width: 67%;
+            padding-bottom: var(--spacing-lg);
         }
     }
 
     @media screen and (max-width: 480px) {
-        #nav-bio {
+        nav {
             width: 100%;
         }
     }

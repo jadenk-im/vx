@@ -1,85 +1,77 @@
 main {
-    padding-left: var(--spacing-sm);
-    padding-right: var(--spacing-sm);
-    padding-bottom: var(--spacing-lg);
+    padding: var(--spacing-sm);
     display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
-    align-items: flex-start;
+    gap: var(--spacing-sm);
+    height: 100dvh;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-padding-left: var(--spacing-sm);
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
 
-main > div {
-    display: flex;
-    width: 100%;
-}
-
-#project-header, #category-header {
-    flex: 2;
-}
-
-#year-header { 
-    flex: 1;
-}
-
-#image-header {
-    flex: 7;
-    left: 4px;
+main > a {
+    height: 100dvh;
+    flex: 0 0 auto;
 }
 
 main > a > div {
     display: flex;
-    gap: var(--spacing-sm);
+    flex-direction: column;
+    gap: calc(var(--spacing-sm) / 2);
 }
 
-.project-title {
-    flex: 5;
+.project-title > div {
     display: flex;
-    gap: var(--spacing-sm);
-}
-
-.project-title > p {
-    flex: 2;
-    max-height: fit-content;
-}
-
-.project-title > p:last-child {
-    flex: 1;
-    max-height: fit-content;
-}
-
-.project-cover {
-    flex: 7;
-    display: flex;
-    gap: var(--spacing-sm);
+    justify-content: space-between;
 }
 
 .project-cover > img {
     width: 100%;
     border-radius: var(--border-radius);
-    aspect-ratio: 16/9;
     object-fit: cover;
+}
+
+main > a:nth-child(even) {
+    width: 33dvw;
+}
+
+main > a:nth-child(odd) {
+    width: 25dvw;
 }
 
 /* BREAKPOINTS */
 
-    @media screen and (max-width: 1280px) {
-        main > div {
-            display: none;
-        }
-        .project-title {
-            flex-direction: column;
-            gap: 0;
-            flex: 3;
-        }
-
-        .project-cover {
-            flex: 9;
-        }
+@media screen and (max-width: 1280px) {
+    main > a:nth-child(even) {
+        width: 50dvw;
     }
 
-    @media screen and (max-width: 768px) {
-        main > a > div {
-            flex-direction: column-reverse;
-            gap: var(--spacing-sm);
-        }
+    main > a:nth-child(odd) {
+        width: 33vw;
     }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        overflow: auto;
+        gap: var(--spacing-md);
+        height: auto;
+        padding-bottom: var(--spacing-lg);
+    }
+
+    main > a {
+        width: calc(100% - var(--spacing-md)) !important;
+        height: auto;
+        flex: 0 0 auto;
+    }
+
+    main > a:nth-child(even) {
+        align-self: flex-end;
+    }
+
+    main > a:nth-child(odd) {
+        align-self: flex-start;
+    }
+}

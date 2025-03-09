@@ -1,3 +1,10 @@
+html {
+  scroll-snap-type: y mandatory;
+  scroll-padding: var(--spacing-sm);
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
 body {
     padding-top: var(--spacing-sm);
     padding-left: var(--spacing-sm);
@@ -7,10 +14,11 @@ body {
 
 .left-column {
     position: fixed;
+    height: calc(100% - (2 * var(--spacing-sm)));
     width: calc(33% - (var(--spacing-sm) + var(--spacing-md)));
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-lg);
+    justify-content: space-between;
 }
 
 #nav-logo {
@@ -23,13 +31,22 @@ body {
   gap: calc(var(--spacing-sm)*2);
 }
 
+.project-title > div {
+  display: flex;
+  width: calc(100dvw - (2 * var(--spacing-sm)));
+  justify-content: space-between;
+}
+
+.project-title > div > a {
+  display: none;
+}
+
 .project-title > h4 {
   padding-top: calc(var(--spacing-md) - var(--spacing-sm));
 }
 
 .right-column {
     padding-left: calc(33% + var(--spacing-sm));
-    padding-top: calc(var(--spacing-sm) + var(--spacing-lg));
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
@@ -41,6 +58,7 @@ body {
     border-radius: var(--border-radius);
     aspect-ratio: 16/9;
     object-fit: cover;
+    /* scroll-snap-align: start; */
 }
 
 .full-image {
@@ -75,6 +93,15 @@ iframe {
     width: 100%;
     padding-left: 0;
     padding-top: var(--spacing-md);
+  }
+
+  .project-title > div > a {
+    display: block;
+    justify-content: space-between;
+  }
+
+  .left-column > a {
+    display: none;
   }
 }
 

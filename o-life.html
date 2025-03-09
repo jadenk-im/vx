@@ -1,0 +1,67 @@
+<!-- 2025 (C) JADEN KIM -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MoOSE</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="stylesheet" href="styles/typography.css">
+
+  <link rel="stylesheet" href="styles/components/nav.css">
+  <link rel="stylesheet" href="styles/components/lightbox.css">
+  <link rel="stylesheet" href="styles/components/carousel.css">
+  <link rel="stylesheet" href="styles/pages/project.css">
+</head>
+
+<body>
+    <div id="lightbox" class="lightbox">
+      <img class="lightbox-content" id="lightbox-image">
+      <button class="lightbox-btn prev-lightbox">&#10094;</button>
+      <button class="lightbox-btn next-lightbox">&#10095;</button>
+    </div>
+
+    <div class="left-column">
+      <div class="project-title">
+        <div>
+          <p>O(Life)</p>
+          <a href="index.html">Back</a>
+        </div>
+        <p>Branding, Website</p>
+        <p>MoOSE, the Museum of Outer Space Entities, is a fictional museum on extraterrestrial life whose identity is shaped by the subtle tilt of a UFO, reflecting its off-kilter and mysterious nature.</p>
+        <h4>
+          March 2025
+          <br>
+          Mentored by Meredith Zerby, Anastasia Kharchenko, & Renee Freiha
+      </div>
+      <a href="index.html">Back</a>
+    </div>
+
+    <div class="right-column">
+
+      <img class="clickable-image" src="./assets/images/o-life/o-1.jpg" alt="O(Life), Image 1">
+
+      <div class="carousel">
+        <button class="carousel-btn prev" onclick="prevSlide()">&#10094;</button>
+        <div class="carousel-images">
+          <img class="clickable-image" src="./assets/images/o-life/o-7.jpg" alt="O(Life), Image 7">
+          <img class="clickable-image" src="./assets/images/o-life/o-8.jpg" alt="O(Life), Image 8">
+          <img class="clickable-image" src="./assets/images/o-life/o-9.jpg" alt="O(Life), Image 9">
+        </div>
+        <button class="carousel-btn next" onclick="nextSlide()">&#10095;</button>
+      </div>
+      <a href="#">Back to Top</a>
+    </div>
+
+    <script src="scripts/lightbox.js"></script>
+    <script src="scripts/carousel.js"></script>
+</body>
+</html>
