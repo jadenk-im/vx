@@ -64,12 +64,11 @@
 }
 
 .prev-lightbox {
-    left: var(--spacing-sm);
+    left: calc(var(--spacing-md) + var(--spacing-sm));
 }
 
 .next-lightbox {
-    right: var(--spacing-sm);
-}
+    right: var(--spacing-sm);right: calc(var(--spacing-md) + var(--spacing-sm));
 
 /* BREAKPOINTS */
 
@@ -78,13 +77,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    .prev-lightbox {
-        left: calc(var(--spacing-md) + var(--spacing-sm));
-    }
-    
-    .next-lightbox {
-        right: calc(var(--spacing-md) + var(--spacing-sm));
-    }
+
 }
 
 @media screen and (max-width: 480px) {

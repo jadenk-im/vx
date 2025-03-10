@@ -10,7 +10,7 @@
 
   --fontsize-sm: 9px;
   --fontsize-md: 14px;
-  --fontsize-lg: 51px;
+  --fontsize-lg: 31px;
 
   --lineheight-sm: 1.3;
   --lineheight-md: 1.1;
@@ -54,11 +54,7 @@ main {
 
 /* BREAKPOINTS */
 @media screen and (max-width: 768px) {
-  :root {
-    --fontsize-lg: 34px;
-    --spacing-lg: 48px;
-    --spacing-md: 24px;
-  }
+
 }
 
 @media screen and (max-width: 480px) {

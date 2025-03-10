@@ -1,3 +1,23 @@
+nav {
+    bottom: 0;
+    padding: var(--spacing-sm);
+    align-items: flex-start;
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+nav > p {
+    flex: 2;
+}
+
+nav > span {
+    position: relative;
+    top: -2px;
+    flex: 5;
+}
+
 main {
     padding: var(--spacing-sm);
     display: flex;
@@ -8,17 +28,33 @@ main {
     scroll-padding: var(--spacing-sm);
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
+    /* scroll-snap-type: x mandatory; */
+
 }
 
-main > a {
+main > a, .intro {
     height: 100dvh;
     flex: 0 0 auto;
+    scroll-snap-align: start;
 }
 
 main > a > div {
     display: flex;
     flex-direction: column;
     gap: calc(var(--spacing-sm) / 2);
+}
+
+.intro {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.intro > .bio {
+    width: 25dvw;
+}
+
+.intro > .links {
+    width: 16.67dvw;
 }
 
 .project-title > div {
@@ -28,27 +64,45 @@ main > a > div {
 
 .project-cover > img {
     width: 100%;
+    max-height: calc(100dvh - (2 * var(--spacing-lg) + var(--spacing-sm)));
     border-radius: var(--border-radius);
     object-fit: cover;
 }
 
-main > a:nth-child(even) {
+main > a:nth-child(5n+1) {
+    width: 25dvw;
+}
+
+main > a:nth-child(5n+2) {
     width: 33dvw;
 }
 
-main > a:nth-child(odd) {
+main > a:nth-child(5n+3) {
+    width: 33dvw;
+}
+
+main > a:nth-child(5n+4) {
     width: 25dvw;
+}
+
+main > a:nth-child(5n) {
+    width: 41.67dvw;
 }
 
 /* BREAKPOINTS */
 
 @media screen and (max-width: 1280px) {
-    main > a:nth-child(even) {
-        width: 50dvw;
+    
+    main > a:nth-child(3n+2) {
+        width: 41.67dvw;
+    }
+    
+    main > a:nth-child(3n) {
+        width: 25dvw;
     }
 
-    main > a:nth-child(odd) {
-        width: 33vw;
+    main > a:nth-child(3n+1) {
+        width: 33.33dvw;
     }
 }
 
@@ -64,6 +118,19 @@ main > a:nth-child(odd) {
     main > a {
         width: 100% !important;
         flex: 0 0 auto;
-        scroll-snap-align: start;
+    }
+
+    .intro > .bio {
+        width: calc(66.67% - var(--spacing-lg));
+    }
+
+    .bio > .links {
+        width: 33.33%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .intro {
+        width: 100%;
     }
 }

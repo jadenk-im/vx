@@ -21,8 +21,8 @@ body {
     justify-content: space-between;
 }
 
-#nav-logo {
-  max-height: fit-content;
+nav {
+  pointer-events: none;
 }
 
 .project-title {
@@ -92,7 +92,7 @@ iframe {
   }
 
   .project-title {
-    width: 67%;
+    width: 75%;
   }
 
   .right-column {
