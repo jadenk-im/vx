@@ -45,8 +45,12 @@ main > a > div {
 }
 
 .intro {
+    order: -1;
     display: flex;
-    gap: var(--spacing-lg);
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    padding-right: var(--spacing-lg);
+
 }
 
 .intro > .bio {
@@ -54,6 +58,8 @@ main > a > div {
 }
 
 .intro > .links {
+    display: flex;
+    flex-direction: column;
     width: 16.67dvw;
 }
 
@@ -69,12 +75,8 @@ main > a > div {
     object-fit: cover;
 }
 
-main > a:nth-child(5n+1) {
-    width: 25dvw;
-}
-
 main > a:nth-child(5n+2) {
-    width: 33dvw;
+    width: 25dvw;
 }
 
 main > a:nth-child(5n+3) {
@@ -82,10 +84,14 @@ main > a:nth-child(5n+3) {
 }
 
 main > a:nth-child(5n+4) {
-    width: 25dvw;
+    width: 33dvw;
 }
 
 main > a:nth-child(5n) {
+    width: 16.67dvw;
+}
+
+main > a:nth-child(5n+1) {
     width: 41.67dvw;
 }
 
@@ -104,6 +110,10 @@ main > a:nth-child(5n) {
     main > a:nth-child(3n+1) {
         width: 33.33dvw;
     }
+
+    .intro > .bio {
+        width: 33dvw;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -118,6 +128,12 @@ main > a:nth-child(5n) {
     main > a {
         width: 100% !important;
         flex: 0 0 auto;
+    }
+    
+    .intro {
+        order: 1;
+        flex-direction: row;
+        gap: var(--spacing-lg);
     }
 
     .intro > .bio {
