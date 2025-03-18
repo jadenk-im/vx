@@ -76,15 +76,15 @@ main > a > div {
 }
 
 main > a:nth-child(5n+2) {
-    width: 25dvw;
+    width: 33dvw;
 }
 
 main > a:nth-child(5n+3) {
-    width: 33dvw;
+    width: 25dvw;
 }
 
 main > a:nth-child(5n+4) {
-    width: 33dvw;
+    width: 41.67dvw;
 }
 
 main > a:nth-child(5n) {
