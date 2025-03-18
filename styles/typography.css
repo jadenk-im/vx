@@ -8,7 +8,6 @@ h1, h2, h4, p, a, label, input, button {
   border: none;
   color: inherit;
   hyphens: auto;
-  text-align: justify;
 }
 
 h1 {
