@@ -75,23 +75,27 @@ main > a > div {
     object-fit: cover;
 }
 
-main > a:nth-child(5n+2) {
+main > a:nth-child(6n+2) {
     width: 33dvw;
 }
 
-main > a:nth-child(5n+3) {
+main > a:nth-child(6n+3) {
     width: 25dvw;
 }
 
-main > a:nth-child(5n+4) {
+main > a:nth-child(6n+4) {
     width: 41.67dvw;
 }
 
-main > a:nth-child(5n) {
+main > a:nth-child(6n+5) {
     width: 16.67dvw;
 }
 
-main > a:nth-child(5n+1) {
+main > a:nth-child(6n) {
+    width: 25dvw;
+}
+
+main > a:nth-child(6n+1) {
     width: 41.67dvw;
 }
 
