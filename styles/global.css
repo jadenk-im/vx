@@ -52,6 +52,10 @@ main {
   flex-grow: 1;
 }
 
+.freeze {
+  pointer-events: none;
+}
+
 /* BREAKPOINTS */
 @media screen and (max-width: 768px) {
 
