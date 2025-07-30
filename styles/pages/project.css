@@ -24,6 +24,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    z-index: 1;
 }
 
 .project-title {
@@ -60,6 +61,7 @@ nav {
     flex-direction: column;
     gap: var(--spacing-sm);
     width: 100%;
+    z-index: 0;
 }
 
 .right-column > img {
