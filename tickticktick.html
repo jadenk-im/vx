@@ -21,6 +21,8 @@
   <link rel="stylesheet" href="styles/components/nav.css">
   <link rel="stylesheet" href="styles/components/lightbox.css">
   <link rel="stylesheet" href="styles/components/carousel.css">
+  <link rel="stylesheet" href="styles/components/modal.css">
+
   <link rel="stylesheet" href="styles/pages/project.css">
 </head>
 
@@ -34,15 +36,63 @@
     <nav>
       <a href="index.html">Jaden Kim</a>
       <ul>
-        <li><a href="#">Index,</a></li>
-        <li><a href="#">Info</a></li>
+        <li>
+          <label for="index-toggle" class="modal-button">Index,</label>
+        </li>
+        <li>
+          <label for="info-toggle" class="modal-button">Info</label>
+        </li>
       </ul>
     </nav>
 
-    <div class="modal">
-      <div class="modal-content">
-        <label for="index-toggle" class="close-button">Close</label>
+    <input type="checkbox" id="index-toggle" class="modal-toggle" hidden />
+    <div class="modal" id="index-modal">
+      <div>
+        <a href="kageshita.html">
+          <p>01</p>
+          <p>Kageshita</p>
+          <p>Identity, 3D</p>
+        </a>
+        <a href="qz.html">
+          <p>02</p>
+          <p>Qz Variable</p>
+          <p>Typeface Design</p>
+        </a>
+        <a href="peppermania-2024.html">
+          <p>03</p>
+          <p>Peppermania 2024</p>
+          <p>Identity, Illustration</p>
+        </a>
+        <a href="tickticktick.html">
+          <p>04</p>
+          <p>Tickticktick</p>
+          <p>Identity, Motion</p>
+        </a>
+        <a href="moose.html">
+          <p>05</p>
+          <p>MoOSE</p>
+          <p>Identity, Website</p>
+        </a>
+        <a href="pppppp.html">
+          <p>06</p>
+          <p>PPP, PPP!</p>
+          <p>Game Design</p>
+        </a>
       </div>
+    </div>
+
+    <input type="checkbox" id="info-toggle" hidden />
+    <div class="modal" id="info-modal">
+      <div>
+        <a href="tel:+1-562-708-4854">(P) 562 708 4854</p>
+        <a href="mailto:jadenk198@gmail.com">(E) jadenk198@gmail.com</a>
+        <a href="assets/files/Jaden_Kim_Internship_Resume.pdf" download>(CV) Download</a></a>
+      </div>
+      <div>
+        <p>MFA Graphic Design, MICA</p>
+        <p>BA Computer Science, Pomona College</p>
+      </div>
+      <p>Jaden Kim is a graphic designer with a background in software engineering. He works at the intersection of design and code, focusing on modular identities and experimental typography.</p>
     </div>
 
     <div class="left-column">
