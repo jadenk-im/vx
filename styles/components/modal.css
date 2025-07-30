@@ -24,23 +24,22 @@
     animation: none;
 }
 
-.modal a {
+.modal > div > a {
   width: 100%;
   display: flex;
   flex-direction: row;
   gap: var(--spacing-sm);
 }
 
-#index-modal a p:nth-child(1) {
+#index-modal a:nth-child(1) {
   width: 6.25dvw;
 }
 
-#index-modal a p:nth-child(2) {
+#index-modal a:nth-child(2) {
   width: 25dvw;
 }
 
 #info-modal div:nth-child(1) {
-  white-space: nowrap;
   width: 15dvw;
 }
 
