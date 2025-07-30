@@ -6,23 +6,24 @@ html {
 }
 
 body {
-    padding-top: var(--spacing-sm);
+    padding-top: var(--spacing-xl);
     padding-left: var(--spacing-sm);
     padding-right: var(--spacing-sm);
-    padding-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-xl);
+}
+
+nav {
+  padding-left: 0 !important;
+  padding-right: calc(2 * var(--spacing-sm)) !important;
 }
 
 .left-column {
     position: fixed;
-    height: calc(100% - (2 * var(--spacing-sm)));
+    height: calc(100% - (var(--spacing-sm) + var(--spacing-xl)));
     width: calc(25% - (var(--spacing-sm) + var(--spacing-md)));
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-nav {
-  pointer-events: none;
 }
 
 .project-title {
@@ -31,18 +32,26 @@ nav {
   gap: var(--spacing-sm);
 }
 
-.project-title > div {
+.project-title-head {
   display: flex;
   width: calc(100dvw - (2 * var(--spacing-sm)));
   justify-content: space-between;
 }
 
-.project-title > div > a {
+.project-title-head > a {
   display: none;
 }
 
-.project-title > h4 {
+.project-details-container {
   padding-top: var(--spacing-md);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-sm);
+}
+
+.project-details-title {
+  width: 25%;
 }
 
 .right-column {
@@ -97,20 +106,24 @@ iframe {
   .right-column {
     width: 100%;
     padding-left: 0;
-    padding-top: var(--spacing-md);
+    padding-top: var(--spacing-lg);
   }
 
-  .project-title > div > a {
+  .project-title-head > a {
     display: block;
     justify-content: space-between;
   }
 
-  .left-column > a {
-    display: none;
+  .project-details-title {
+    width: 33%;
   }
 
-  .project-title > h4 {
-    padding-top: calc(var(--spacing-sm)/2);
+  .project-details-container {
+    padding-top: var(--spacing-sm);
+  }    
+
+  .left-column > a {
+    display: none;
   }
 }
 

@@ -1,12 +1,16 @@
 :root {
   --bg-color: white;
-  --text-color: hsl(0,0%, 10%);
+  --text-color: hsl(0,0%, 20%);
   --highlight-color: hsl(0,0%,60%);
 
+  --spacing-xs: 4px;
   --spacing-sm: 12px;
   --spacing-md: 24px;
   --spacing-lg: 48px;
+  --spacing-xl: 108px;
   --spacing-button: 24px;
+
+  --border-radius: 0px;
 
   --fontsize-sm: 9px;
   --fontsize-md: 14px;
@@ -34,6 +38,7 @@
 html, body {
   color: var(--text-color);
   margin: 0;
+  padding: 0;
   background-color: var(--bg-color);
   background-repeat: no-repeat;
   background-attachment: fixed;

@@ -1,0 +1,79 @@
+.modal-toggle {
+  display: none;
+}
+
+.modal-button, .close-button {
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.modal {
+    z-index: 9998;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    padding: var(--spacing-xl) var(--spacing-sm);
+    display: flex;
+    align-items: flex-end;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 250ms var(--transition);
+    animation: none;
+}
+
+.modal a {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-sm);
+}
+
+#index-modal a p:nth-child(1) {
+  width: 6.25dvw;
+}
+
+#index-modal a p:nth-child(2) {
+  width: 25dvw;
+}
+
+#info-modal div:nth-child(1) {
+  white-space: nowrap;
+  width: 15dvw;
+}
+
+#info-modal div:nth-child(2) {
+  width: 25dvw;
+}
+
+#info-modal p {
+  width: 33dvw;
+}
+
+#index-toggle:checked ~ #index-modal, #info-toggle:checked ~ #info-modal {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* BREAKPOINTS */
+@media screen and (max-width: 1280px) {
+   #info-modal div:nth-child(1) {
+    width: 33dvw;
+  }
+
+  #info-modal div:nth-child(2) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #info-modal div:nth-child(1) {
+    width: 40dvw;
+  }
+
+  #info-modal p {
+    width: 50dvw;
+  }
+}
