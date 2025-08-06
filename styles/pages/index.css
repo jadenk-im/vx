@@ -1,14 +1,14 @@
 main {
-    padding: var(--spacing-sm);
-    display: flex;
-    align-items: flex-end;
-    gap: var(--spacing-sm);
-    height: 100dvh;
     overflow-x: scroll;
     overflow-y: hidden;
     scroll-padding: var(--spacing-sm);
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
+    display: flex;
+    align-items: flex-end;
+    gap: var(--spacing-sm);
+    height: 100dvh;
+    padding: var(--spacing-sm);
 }
 
 main > a {
@@ -36,10 +36,27 @@ main > a {
 }
 
 @media screen and (max-width: 768px) {
+    body {
+        padding: 0 var(--spacing-sm);
+    }
+
+    nav {
+        padding-left: 0 !important;
+        padding-right: calc(2 * var(--spacing-sm)) !important;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+    }
+
     main {
         flex-direction: column;
-        overflow: auto;
-        scroll-snap-type: y mandatory;
+        overflow: visible;
+        padding: 0;
     }
 
     main > a {
@@ -47,6 +64,10 @@ main > a {
         width: 100% !important;
         scroll-snap-align: end;
         justify-content: flex-end;
+    }
+
+    a {
+        padding: var(--spacing-sm) 0;
     }
 }
 

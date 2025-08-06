@@ -1,8 +1,6 @@
 html {
-  scroll-snap-type: y mandatory;
-  scroll-padding: var(--spacing-sm);
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -35,7 +33,6 @@ nav {
 
 .project-title-head {
   display: flex;
-  width: calc(100dvw - (2 * var(--spacing-sm)));
   justify-content: space-between;
 }
 
@@ -68,7 +65,6 @@ nav {
     width: 100%;
     border-radius: var(--border-radius);
     object-fit: cover;
-    /* scroll-snap-align: start; */
 }
 
 .full-image {
@@ -99,10 +95,6 @@ iframe {
   .left-column {
     position: relative;
     width: 100%
-  }
-
-  .project-title {
-    width: 75%;
   }
 
   .right-column {
