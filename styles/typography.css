@@ -37,7 +37,7 @@ a {
   display: inline-block;
 }
 
-a:hover, label:hover, input:hover {
+a:hover, label:hover, input:hover, button:hover {
   color: var(--highlight-color);
 }
 
