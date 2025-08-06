@@ -79,4 +79,12 @@
   #info-modal p {
     width: 50dvw;
   }
+
+  #index-modal p:nth-child(2) {
+    width: 100%;
+  }
+
+  #index-modal p:nth-child(3) {
+    text-align: right;
+  }
 }
