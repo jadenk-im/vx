@@ -1,12 +1,3 @@
-.modal-toggle {
-  display: none;
-}
-
-.modal-button, .close-button {
-  cursor: pointer;
-  color: var(--text-color);
-}
-
 .modal {
     z-index: 9998;
     position: fixed;
@@ -24,7 +15,24 @@
     animation: none;
 }
 
+.modal-button {
+  cursor: pointer;
+  background: none;
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .modal > div > a {
+  padding: 0;
   width: 100%;
   display: flex;
   flex-direction: row;

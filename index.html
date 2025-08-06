@@ -29,15 +29,14 @@
     <a href="index.html">Jaden Kim</a>
     <ul>
       <li>
-        <label for="index-toggle" class="modal-button">Index,</label>
+       <button class="modal-button" data-toggle="index">Index,</button>
       </li>
       <li>
-        <label for="info-toggle" class="modal-button">Info</label>
+        <button class="modal-button" data-toggle="info">Info</button>
       </li>
     </ul>
   </nav>
 
-  <input type="checkbox" id="index-toggle" class="modal-toggle" hidden />
   <div class="modal" id="index-modal">
       <div>
         <a href="kageshita.html">
@@ -73,7 +72,6 @@
       </div>
     </div>
 
-  <input type="checkbox" id="info-toggle" hidden />
   <div class="modal" id="info-modal">
     <div>
       <a href="tel:+1-562-708-4854">(P) 562 708 4854</a>
@@ -131,6 +129,7 @@
     </a>
   </main>
 
+  <script src="scripts/modal.js"></script>
 </body>
 </html>
 
