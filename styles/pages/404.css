@@ -7,3 +7,16 @@ html, body, main {
     background-size: cover;
     background-color: transparent;
 }
+
+main {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-padding: var(--spacing-sm);
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    align-items: flex-end;
+    gap: var(--spacing-sm);
+    height: 100dvh;
+    padding: var(--spacing-sm);
+}
