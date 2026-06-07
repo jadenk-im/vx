@@ -59,7 +59,7 @@
   width: 25dvw;
 }
 
-#info-modal p {
+#info-modal > p {
   width: 33dvw;
 }
 
@@ -71,10 +71,14 @@
 /* BREAKPOINTS */
 @media screen and (max-width: 1280px) {
    #info-modal div:nth-child(1) {
-    width: 33dvw;
+    width: 50dvw;
   }
 
   #info-modal div:nth-child(2) {
+    width: 50dvw;
+  }
+
+  #info-modal > p {
     display: none;
   }
 }
