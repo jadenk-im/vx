@@ -13,6 +13,29 @@ document.addEventListener("DOMContentLoaded", () => {
     activeModal = modal;
   };
 
+  // const infoUpdate = () => {
+  //   const textElement = document.getElementById("contact-div");
+  //   const mediaQuery = window.matchMedia("(max-width: 768px)");
+
+  //   function handleScreenChange(e) {
+  //     for (i in e) {
+  //       if (i.matches) {
+  //       // <= 768px
+  //       textElement.textContent = "Placeholder";
+  //     } else {
+  //       // > 768px
+  //       textElement.textContent = "Placeholder";
+  //     }
+  //     }
+      
+  //   }
+
+  //   mediaQuery.addEventListener("change", handleScreenChange);
+
+  //   // run at load
+  //   handleScreenChange(mediaQuery);
+  // };
+
   document.addEventListener("click", (e) => {
     const button = e.target.closest("[data-toggle]");
     if (!button) return;
