@@ -92,4 +92,9 @@
   #index-modal p:nth-child(3) {
     text-align: right;
   }
+
+  #info-modal div:nth-child(1) {
+    width: auto !important;
+    padding-right: var(--spacing-sm);
+  }
 }
