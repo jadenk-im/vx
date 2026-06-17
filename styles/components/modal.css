@@ -93,8 +93,19 @@
     text-align: right;
   }
 
+  #info-modal {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
   #info-modal div:nth-child(1) {
-    width: auto !important;
-    padding-right: var(--spacing-sm);
+    width: 100% !important;
+    padding-right: none;
+    padding-bottom: var(--spacing-md);
+    padding-right: none !important;
+  }
+
+  #info-modal div:nth-child(2) {
+    width: 100% !important;
   }
 }
