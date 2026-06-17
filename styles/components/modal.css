@@ -44,23 +44,23 @@
 }
 
 #index-modal p:nth-child(1) {
-  width: 6.25dvw;
+  width: auto;
 }
 
 #index-modal p:nth-child(2) {
-  width: 25dvw;
+  width: 216px;
 }
 
 #info-modal div:nth-child(1) {
-  width: 15dvw;
+  width: 216px;
 }
 
 #info-modal div:nth-child(2) {
-  width: 25dvw;
+  width: 304px;
 }
 
 #info-modal > p {
-  width: 33dvw;
+  width: auto;
 }
 
 #index-toggle:checked ~ #index-modal, #info-toggle:checked ~ #info-modal {
