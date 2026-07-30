@@ -14,5 +14,5 @@ nav > ul {
     list-style: none;
     display: flex;
     flex-direction: row;
-    gap: var(--spacing-xs);
+    gap: var(--spacing-xxs);
 }

@@ -3,7 +3,8 @@
   --text-color: hsl(0,0%, 20%);
   --highlight-color: hsl(0,0%,60%);
 
-  --spacing-xs: 4px;
+  --spacing-xxs: 4px;
+  --spacing-xs: 8px;
   --spacing-sm: 12px;
   --spacing-md: 24px;
   --spacing-lg: 48px;
