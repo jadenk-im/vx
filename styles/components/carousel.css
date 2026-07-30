@@ -41,7 +41,7 @@
 
 .carousel-btn:hover {
     background-color: white;
-    color: black;
+    color: var(--text-color);
 }
 
 .prev {
