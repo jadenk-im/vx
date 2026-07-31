@@ -80,7 +80,6 @@ nav {
 .custom-play-button-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
 }
 
 .custom-play-button-container mux-player {
@@ -126,11 +125,13 @@ nav {
 mux-player {
   transition: var(--transition-all);
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 100%;
   border: none;
   padding: 0;
   margin: 0;
   display: block;
+  background-color: transparent;
+  --media-background-color: transparent;
   --media-object-fit: cover;
   --media-object-position: center;
   --seek-backward-button: none;
