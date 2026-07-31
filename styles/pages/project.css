@@ -130,6 +130,7 @@ mux-player {
   border: none;
   padding: 0;
   margin: 0;
+  display: block;
   --media-object-fit: cover;
   --media-object-position: center;
   --seek-backward-button: none;
