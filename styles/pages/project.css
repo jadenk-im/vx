@@ -72,12 +72,125 @@ nav {
     aspect-ratio: auto !important;
 }
 
-iframe {
+.bg-video {
+  --controls: none;
+}
+
+/* CONTAINER APPLIED ONLY TO NON-BG VIDEO */
+.custom-play-button-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.custom-play-button-container mux-player {
+  pointer-events: none;
+}
+
+.custom-play-button-container.is-active mux-player {
+  pointer-events: auto;
+}
+
+.custom-play-button {
+  height: var(--spacing-button-lg);
+  width: var(--spacing-button-lg);
+  font-size: var(--fontsize-md);
+  padding: var(--spacing-sm);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.2);
+  border: solid 1px rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: var(--bg-color);
+  transition: var(--transition-all);
+}
+
+.custom-play-button:hover {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.custom-play-button-container.is-active .custom-play-button {
+  opacity: 0;
+  pointer-events: none; 
+}
+
+mux-player {
+  transition: var(--transition-all);
   width: 100%;
   aspect-ratio: 16 / 9;
   border: none;
+  padding: 0;
+  margin: 0;
+  --media-object-fit: cover;
+  --media-object-position: center;
+  --seek-backward-button: none;
+  --seek-forward-button: none;
+  --live-button: none;
+  --mute-button: none;
+  --captions-button:none;
+  --airplay-button: none;
+  --pip-button: none;
+  --cast-button: none;
+  --playback-rate-button: none;
+  --time-range: none;
+  --volume-range: none;
+  --rendition-menu-button: none;
+  --media-tooltip-display: none;
+
+  --range-track-color: rgba(255, 255, 255, 0.2);
+  --range-thumb-color: var(--bg-color);
+  --range-progress-color: var(--bg-color);
 }
 
+mux-player::part(center play button) {
+  display: none;
+}
+
+mux-player::part(bottom) {
+  background: none;
+  padding: var(--spacing-xs);
+}
+
+mux-player::part(bottom play button),
+mux-player::part(fullscreen button),
+mux-player::part(time) {
+  color: var(--bg-color);
+  border-radius: 8px;
+  border: solid 1px transparent;
+  transition: var(--transition-all);
+  padding: var(--spacing-xs);
+}
+
+mux-player::part(bottom play button),
+mux-player::part(fullscreen button) {
+  width: var(--spacing-button-md);
+  height: var(--spacing-button--md);
+}
+
+mux-player::part(time) {
+  pointer-events: none;
+}
+
+mux-player::part(bottom play button):hover,
+mux-player::part(fullscreen button):hover{
+  background-color: rgba(255, 255, 255, 0.2);
+  border: solid 1px rgba(255, 255, 255, 0.5);
+}
+
+mux-player::part(time) {
+  font-family: 'NeueHaas';
+  font-size: var(--fontsize-sm);
+  color: var(--bg-color);
+}
 
 /* BREAKPOINTS */
 
@@ -92,6 +205,11 @@ iframe {
 }
 
 @media screen and (max-width: 768px) {
+  .custom-play-button {
+    font-size: var(--fontsize-md);
+    padding: var(--spacing-xs);
+  }
+
   .left-column {
     position: relative;
     width: 100%

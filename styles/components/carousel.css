@@ -30,17 +30,18 @@
     font-size: var(--fontsize-sm);
     z-index: 10;
     transition: var(--transition-all);
-    height: var(--spacing-button);
-    width: var(--spacing-button);
+    height: var(--spacing-button-sm);
+    width: var(--spacing-button-sm);
     border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
+    backdrop-filter: blur(4px);
 }
 
 .carousel-btn:hover {
-    background-color: white;
+    background-color: var(--bg-color);
     color: var(--text-color);
 }
 

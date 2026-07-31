@@ -1,7 +1,7 @@
 :root {
   --bg-color: white;
-  --text-color: hsl(0,0%, 20%);
-  --highlight-color: hsl(0,0%,60%);
+  --text-color: #333333;
+  --highlight-color: #999999;
 
   --spacing-xxs: 4px;
   --spacing-xs: 8px;
@@ -9,7 +9,9 @@
   --spacing-md: 24px;
   --spacing-lg: 48px;
   --spacing-xl: 108px;
-  --spacing-button: 24px;
+  --spacing-button-sm: 24px;
+  --spacing-button-md: 32px;
+  --spacing-button-lg: 40px;
 
   --border-radius: 0px;
 
@@ -63,7 +65,9 @@ main {
 
 /* BREAKPOINTS */
 @media screen and (max-width: 768px) {
-
+  :root {
+    --spacing-button-lg: 32px;
+  }
 }
 
 @media screen and (max-width: 480px) {

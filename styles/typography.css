@@ -11,7 +11,6 @@ h1, h2, h4, p, a, label, input, button {
 }
 
 h1 {
-  font-family: 'NeueHaas';
   font-size: var(--fontsize-lg);
   line-height: var(--lineheight-lg);
 }
