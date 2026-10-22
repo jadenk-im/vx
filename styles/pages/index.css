@@ -25,6 +25,7 @@ main > a {
     border-radius: var(--border-radius);
     object-fit: cover;
     margin: 0;
+    display: block;
 }
 
 /* BREAKPOINTS */
@@ -68,6 +69,10 @@ main > a {
 
     a {
         padding: 0;
+    }
+
+    .project-cover > img {
+        margin-bottom: var(--spacing-sm);
     }
 }
 

@@ -52,11 +52,11 @@
 }
 
 #info-modal div:nth-child(1) {
-  width: 216px;
+  width: 392px;
 }
 
 #info-modal div:nth-child(2) {
-  width: 304px;
+  width: auto;
 }
 
 #info-modal > p {

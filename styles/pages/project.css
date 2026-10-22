@@ -91,10 +91,10 @@ nav {
 }
 
 .custom-play-button {
-  height: var(--spacing-button-lg);
-  width: var(--spacing-button-lg);
+  height: auto;
+  width: auto;
   font-size: var(--fontsize-md);
-  padding: var(--spacing-sm);
+  padding: var(--spacing-xs);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -147,6 +147,7 @@ mux-player {
   --volume-range: none;
   --rendition-menu-button: none;
   --media-tooltip-display: none;
+  --fullscreen-button: none;
 
   --range-track-color: rgba(255, 255, 255, 0.2);
   --range-thumb-color: var(--bg-color);
@@ -163,7 +164,6 @@ mux-player::part(bottom) {
 }
 
 mux-player::part(bottom play button),
-mux-player::part(fullscreen button),
 mux-player::part(time) {
   color: var(--bg-color);
   border-radius: 8px;
@@ -172,8 +172,7 @@ mux-player::part(time) {
   padding: var(--spacing-xs);
 }
 
-mux-player::part(bottom play button),
-mux-player::part(fullscreen button) {
+mux-player::part(bottom play button) {
   width: var(--spacing-button-md);
   height: var(--spacing-button--md);
 }
@@ -182,14 +181,12 @@ mux-player::part(time) {
   pointer-events: none;
 }
 
-mux-player::part(bottom play button):hover,
-mux-player::part(fullscreen button):hover {
+mux-player::part(bottom play button):hover {
   background-color: rgba(255, 255, 255, 0.2);
   border: solid 1px rgba(255, 255, 255, 0.5);
 }
 
-mux-player::part(bottom play button):active,
-mux-player::part(fullscreen button):active{
+mux-player::part(bottom play button):active {
   background-color: var(--bg-color);
   color: var(--text-color);
 }

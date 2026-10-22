@@ -59,6 +59,10 @@ main {
   flex-grow: 1;
 }
 
+img {
+  border-radius: var(--border-radius);
+}
+
 .freeze {
   pointer-events: none;
 }

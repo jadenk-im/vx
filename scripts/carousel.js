@@ -4,29 +4,26 @@ document.addEventListener("DOMContentLoaded", () => {
         const slides = slidesContainer.children;
         const totalSlides = slides.length;
 
-        let currentIndex = 1; // Start at first real slide (after the cloned one)
+        let currentIndex = 1;
         let isTransitioning = false;
 
         const prevButton = carousel.querySelector(".prev");
         const nextButton = carousel.querySelector(".next");
 
-        // Clone first and last slides for seamless looping
         const firstClone = slides[0].cloneNode(true);
         const lastClone = slides[totalSlides - 1].cloneNode(true);
 
         slidesContainer.appendChild(firstClone);
         slidesContainer.insertBefore(lastClone, slides[0]);
 
-        // Adjust total slides count
         const updatedSlides = slidesContainer.children;
         const updatedTotalSlides = updatedSlides.length;
 
-        // Move to first real slide (to avoid seeing the clone)
         slidesContainer.style.transform = `translateX(-100%)`;
 
         const updateSlidePosition = () => {
             slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-            slidesContainer.style.transition = "transform 0.5s ease-in-out";
+            slidesContainer.style.transition = "transform 500ms var(--transition)";
         };
 
         const nextSlide = () => {
